@@ -1,0 +1,609 @@
+::selection{
+    background:rgb(12, 0, 37);
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;    
+}
+
+*{
+    font-family: 'Teko', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header Properties */
+
+#header{
+    box-shadow: 0px 10px 20px rgb(0, 0, 0);
+    height: 100%;
+}
+#headertopbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 20px;
+}
+#headertopbarlogo{
+    height: fit-content;
+    display: flex;
+    align-items: center;    
+}
+#headertopbarlogoimg{
+    height: 15px;
+}
+#headerlinks{
+    opacity: 100;
+}
+#headerlinks a{
+    font-size: 30px;
+    color: black;
+    padding: 0px 30px;
+    height: 100%;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.1s;
+}
+#headerlinks a:hover{
+    border-bottom: 5px solid red;
+}
+#headerlinks a:nth-child(5){
+    color: white;
+    background: linear-gradient(red,rgb(255, 102, 102));
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#headerlinks a:nth-child(5):hover{
+    border-bottom: 0px;
+}
+#headermenu{
+    height: 20px;
+    display: none;
+}
+#headerclose{
+    height: 30px;
+    display: none;
+}
+
+@media (max-width:1000px) and (min-width:0px) {
+    #headerlinks::-webkit-scrollbar{
+        background: linear-gradient(red,blue);
+        width: 5px;
+    }
+    #headerlinks::-webkit-scrollbar-thumb{
+        background:linear-gradient(red,blue);
+    }
+    #headerlinks{
+        display: none;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0px;
+        opacity: 0;
+        transition: 0.5s;
+        right: 0px;
+        padding: 60px 120px;
+        padding-left: 50px;
+        box-shadow: -361px 0px 272px 376px #000000b5;
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+    }
+    #headerlinks a:nth-child(2){
+        display: block;
+        font-size: 26px;
+        height: fit-content;
+        width: 100%;
+        padding: 30px 0px;
+    }
+    #headerlinks a:nth-child(3){
+        display: block;
+        height: fit-content;
+        width: 100%;
+        padding: 30px 0px;
+        font-size: 26px;
+    }
+    #headerlinks a:nth-child(4){
+        display: block;
+        height: fit-content;
+        padding: 30px 0px;
+        width: 100%;
+        font-size: 26px;
+    }
+    #headerlinks a:nth-child(5){
+        display: block;
+        color: white;
+        height: fit-content;
+        padding: 10px 15px;
+        font-size: 26px;
+        background: red;
+        width: 100%;
+    }
+    #headermenu{
+        display: block;
+    }
+    #headerclose{
+        display: block;
+        position: relative;
+        top: -28px;
+        right: -170px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COVER */
+
+#cover{
+    background: url(cover.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+#coveroverlay{
+    background: rgba(0, 0, 0, 0.734);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 320px 0px;
+}
+#coveroverlay h1{
+    color: white;
+    margin: 0px 0px;
+    font-size: 100px;
+    font-weight: 900;
+}
+#coveroverlay h3{
+    margin-top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+}
+@media (max-width:500px) and (min-width:0px) {
+    #coveroverlay h1{
+        font-size: 70px;
+    }
+    #coveroverlay h3{
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT ME */
+
+#aboutme{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#mydata{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+#mytxt{
+    padding-left: 20px;
+}
+#mytxt h2{
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#mytxt p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+#myskill{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    border-radius: 0px;
+    background: rgb(73, 73, 73);
+    padding: 50px;
+}
+#myskillhead{
+    background-color: white;
+    width: 25%;
+}
+#sk1,#sk2,#sk3{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-weight: 200;
+}
+
+#sk1 h2,#sk2 h2,#sk3 h2{
+font-weight: 200;
+font-size: 20px;
+letter-spacing: 1px;
+}
+#sk1img{
+    height: 50px;
+}
+#sk2img{
+    height: 50px;
+}
+#sk3img{
+    height: 50px;
+}
+#myhandle{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    padding: 50px;
+}
+#myhandlehead{
+    background-color: white;
+    width: 25%;
+}
+#myhandlehead center h2{
+    margin: -30px;
+    margin-bottom: -10px;
+}
+#myhandlebtn{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#myhandleinsta{     
+    width: 25%;
+    display: flex;
+    padding: 30px;
+    flex-direction:column;
+    border: none;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 4px;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+}
+#myhandleyoutube{       
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+    border: none;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 4px;
+    background-color: white;
+}
+#myhandlepateron{     
+    background-color: white;
+    width: 25%;
+    display: flex;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 4px;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+    border: none;
+}
+#myhandleinsta a h2{
+    font-size: 30px;
+    color: black;
+    font-weight: 300;
+}
+#myhandleinsta a{
+       text-decoration: none;
+}
+#myhandleyoutube a h2{
+    font-size: 30px;
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+}
+#myhandleyoutube a{
+    text-decoration: none;
+}
+#myhandlepateron a{
+    text-decoration: none;
+}
+#myhandlepateron h2{
+    font-size: 30px;
+    color: black;
+    font-weight: 300;
+}
+#handle1{
+    height: 70px;
+}
+#handle2{
+    height: 70px;
+}
+#handle3{
+    height: 50px;
+}
+@media (max-width:1000px) and (min-width:0px) {
+    #mydata{
+        width: 100%;
+        display: block;
+    }
+    #mytxt{
+        width: 100%;
+    }
+    #mytxt h2{
+        font-size: 17px;
+    }
+    #myhandlebtn{
+        flex-direction: column;
+    }
+    #myhandlebtn button{
+        width: 100%;
+        padding: 20px;
+        margin: 40px 0px;
+    }
+    #myskill{
+        flex-direction: column;
+    }
+    #sk1,#sk2,#sk3{
+    margin: 30px 0px;
+    }
+}
+
+@media (max-width:500px) and (min-width:0px) {
+    #mydata{
+        padding: 20px 0px;
+    }
+    #myskill{
+        flex-direction: column;
+    }
+    #sk1,#sk2,#sk3{
+    margin: 10px 0px;
+    }
+    #myhandle{
+        padding: 50px 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* My Gears */
+#mygears{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 200px;
+    padding: 20px;
+}
+#mygearshead{
+    width: 100%;
+}
+#mygearshead h2{
+    text-align: center;
+}
+#mygearsbody{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        margin-top: 20px;
+}
+#gear{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33%;
+    border-radius:5px;
+    padding: 20px;
+    margin: 0px 10px;
+    box-shadow: 0px 0px 20px grey;
+}
+#ctk{
+    height: 80px;
+}
+
+#gear h2{
+    margin-bottom: 0px;
+}
+
+#buybtn{
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px blue;
+    background:linear-gradient(10deg,rgb(0, 0, 35),rgb(53, 1, 1));
+}
+
+@media (max-width:1200px) and (min-width:0px) {
+    #ctk{
+        height: 50px;
+    }
+    #gear{
+        width: 100%;
+        padding: 20px;
+        margin: 10px 0px;
+    }
+    #mygearsbody{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#thanks{
+    padding: 20px;
+    background: rgb(15, 15, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+}
+
+#thanks h3{
+    font-weight: 20;
+}
